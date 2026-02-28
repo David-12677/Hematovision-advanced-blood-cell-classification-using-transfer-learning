@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Result - HematoVision</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f2f5;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .result-container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            width: 300px;
+            border-radius: 10px;
+            border: 4px solid #d9534f;
+        }
+
+        .prediction {
+            font-size: 28px;
+            color: #d9534f;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .confidence {
+            font-size: 18px;
+            color: #555;
+        }
+
+        a {
+            text-decoration: none;
+            color: #337ab7;
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="result-container">
+        <h1>Analysis Complete</h1>
+        <img src="{{ img_path }}" alt="Blood Cell">
+        <div class="prediction">Result: {{ label }}</div>
+        <div class="confidence">Confidence: {{ confidence }}%</div>
+        <a href="/">← Upload Another Image</a>
+    </div>
+</body>
+
+</html>

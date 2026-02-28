@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HematoVision - Blood Cell Classifier</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f2f5;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #d9534f;
+        }
+
+        /* Medical Red */
+        input {
+            margin: 20px 0;
+            display: block;
+            width: 100%;
+        }
+
+        button {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>HematoVision AI</h1>
+        <p>Select a microscopic image of a white blood cell.</p>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*" required>
+            <button type="submit">Classify Cell</button>
+        </form>
+    </div>
+</body>
+
+</html>
